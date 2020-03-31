@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>panda-simulator</name>
+  <version>1.0.0</version>
+  <description>The panda-simulator package</description>
+
+  <!-- One maintainer tag required, multiple allowed, one person per tag -->
+  <maintainer email="dkanoulas@gmail.com">Dimitrios Kanoulas</maintainer>
+  
+  <!-- One license tag required, multiple allowed, one license per tag -->
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <!-- STANDARD -->
+  <depend>controller_manager</depend>
+  <depend>effort_controllers</depend>
+  <depend>gazebo_ros</depend>
+  <depend>gazebo_ros_control</depend>
+  <depend>joint_state_controller</depend>
+  <depend>joint_state_publisher</depend>
+  <depend>joint_trajectory_controller</depend>
+  <depend>robot_state_publisher</depend>
+  <depend>roscpp</depend>
+  <depend>std_msgs</depend>
+  <depend>tf</depend>
+  <depend>xacro</depend>
+  <depend>libjsoncpp-dev</depend>
+  <depend>moveit_simple_controller_manager</depend>
+
+  <!-- CUSTOMIZED -->
+  <depend>moveit_core</depend>
+  <depend>moveit_ros_planning_interface</depend>
+  <depend>moveit_ros_perception</depend>
+  <depend>moveit_visual_tools</depend>
+  <depend>controller_interface</depend>
+  <depend>hardware_interface</depend>
+
+  <exec_depend>pluginlib</exec_depend>
+
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <controller_interface plugin="${prefix}/controller_plugins.xml" />
+  </export>
+</package>
