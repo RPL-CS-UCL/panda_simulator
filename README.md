@@ -1,8 +1,8 @@
-# panda-simulator
+# panda_simulator
 ```
 mkdir -p catkin_ws/src
 cd catkin_ws/src
-git clone https://github.com/rpl-as-ucl/panda-simulator.git
+git clone https://github.com/rpl-as-ucl/panda_simulator.git
 git clone https://github.com/rpl-as-ucl/panda_moveit_config.git
 git clone --branch simulation https://github.com/rpl-as-ucl/franka_ros.git
 cd ..
@@ -18,7 +18,7 @@ Build the catkin workspace and run the simulation:
 ```
 catkin_make -j4 -DCMAKE_BUILD_TYPE=Release -DFranka_DIR:PATH=/path/to/libfranka/build
 source devel/setup.bash
-roslaunch panda-simulator simulation.launch
+roslaunch panda_simulator simulation.launch
 ```
 
 Depending on your operating systems language you might need to export the numeric type so that rviz can read the floating point numbers in the robot model correctly:

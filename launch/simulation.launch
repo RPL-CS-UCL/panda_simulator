@@ -22,7 +22,7 @@
     <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -model panda" />
 
     <!-- Load joint controller configurations from YAML file to parameter server -->
-    <rosparam file="$(find panda-simulator)/config/panda_control.yaml" command="load" />
+    <rosparam file="$(find panda_simulator)/config/panda_control.yaml" command="load" />
 
 
     <!-- load the controllers -->
@@ -47,12 +47,12 @@
     <node name="joint_state_desired_publisher" pkg="topic_tools" type="relay" args="joint_states joint_states_desired" />
 
     <!-- launch robot control node for moveit motion planning -->
-    <node pkg="panda-simulator" type="robot_control_node" name="robot_control_node" output="screen" />
+    <node pkg="panda_simulator" type="robot_control_node" name="robot_control_node" output="screen" />
 
     <!-- load (not start!) custom joint position controller -->
     <node pkg="controller_manager" type="spawner" name="joint_position_launcher" args="--stopped joint_position_controller" />
 
     <!-- run custom node for automatic intialization -->
-    <node pkg="panda-simulator" type="robot_state_initializer_node" name="robot_state_initializer_node" />
+    <node pkg="panda_simulator" type="robot_state_initializer_node" name="robot_state_initializer_node" />
 
 </launch>

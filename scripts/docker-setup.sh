@@ -3,7 +3,7 @@
 REPOSITORY_DIR=$(pwd)
 WORKSPACE_DIR=/catkin_ws
 DEPENDENCIES_DIR=$WORKSPACE_DIR/dependencies
-APP_DIR=/root/.panda-simulator
+APP_DIR=/root/.panda_simulator
 
 # Install libfranka
 mkdir $DEPENDENCIES_DIR && cd $DEPENDENCIES_DIR

@@ -39,7 +39,7 @@
 
 #include <vector>
 
-namespace panda-simulator {
+namespace panda_simulator {
 
 class JointPositionController : public controller_interface::Controller<hardware_interface::PositionJointInterface> {
   bool init(hardware_interface::PositionJointInterface *hw, ros::NodeHandle &n) {
@@ -91,6 +91,6 @@ private:
   ros::Subscriber sub_command_;
 };
 
-PLUGINLIB_EXPORT_CLASS(panda-simulator::JointPositionController, controller_interface::ControllerBase);
+PLUGINLIB_EXPORT_CLASS(panda_simulator::JointPositionController, controller_interface::ControllerBase);
 
-} // namespace panda-simulator
+} // namespace panda_simulator

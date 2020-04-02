@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>panda-simulator</name>
+  <name>panda_simulator</name>
   <version>1.0.0</version>
-  <description>The panda-simulator package</description>
+  <description>The panda_simulator package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <maintainer email="dkanoulas@gmail.com">Dimitrios Kanoulas</maintainer>

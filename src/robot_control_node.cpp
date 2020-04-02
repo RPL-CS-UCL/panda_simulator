@@ -42,7 +42,7 @@
 
 
 static const std::string PLANNING_GROUP_ARM = "panda_arm";
-static const std::string APP_DIRECTORY_NAME = ".panda-simulator";
+static const std::string APP_DIRECTORY_NAME = ".panda_simulator";
 
 moveit_msgs::CollisionObject extractObstacleFromJson(Json::Value &root, std::string name)
 {
@@ -106,7 +106,7 @@ int main(int argc, char **argv)
   }
   moveit_msgs::PlanningScene planning_scene;
 
-  // read JSON files from ~/.panda-simulator
+  // read JSON files from ~/.panda_simulator
   fs::path home(getenv("HOME"));
   if (fs::is_directory(home))
   {
@@ -117,9 +117,9 @@ int main(int argc, char **argv)
     {
       ROS_WARN_STREAM(app_directory << " does not exist");
 
-      // Create .panda-simulator directory
+      // Create .panda_simulator directory
       std::string path(getenv("HOME"));
-      path += "/.panda-simulator";
+      path += "/.panda_simulator";
       ROS_INFO("Creating %s collision objects directory.", path);
       try
       {
