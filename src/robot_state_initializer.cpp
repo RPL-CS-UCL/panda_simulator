@@ -43,8 +43,8 @@ int main(int argc, char **argv) {
   std::vector<double> panda_ready_state{0, -0.785, 0, -2.356, 0, 1.571, 0.785};
 
   // define variables
-  std::string joint_position_command_topic{"/joint_position_controller/command"},
-      controller_manager_switch_topic{"/controller_manager/switch_controller"};
+  std::string joint_position_command_topic{"joint_position_controller/command"},
+      controller_manager_switch_topic{"controller_manager/switch_controller"};
   ros::ServiceClient switch_controller_client =
       node_handle.serviceClient<controller_manager_msgs::SwitchController>(controller_manager_switch_topic);
   ros::Publisher joint_position_publisher =
